@@ -1,0 +1,1 @@
+{"componentChunkName":"component---src-templates-blog-post-js","path":"/post-two","result":{"data":{"markdownRemark":{"html":"<p>This is my very <strong>second blog</strong> post in Gatsby.</p>","frontmatter":{"path":"/post-two","title":"My Second Post","author":"Kenny Lee","date":"2020-06-02"}}},"pageContext":{}}}
