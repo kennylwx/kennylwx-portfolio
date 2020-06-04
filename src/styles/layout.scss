@@ -1,0 +1,35 @@
+$body-bg: #0E1015;
+$title-col: #F8FAFC;
+
+@font-face {
+  font-family: 'Playfair Display';
+  font-weight: 800;
+  src: url(../assets/fonts/PlayfairDisplay-VariableFont_wght.ttf) format('truetype');
+}
+
+
+html,body {
+  background-color: $body-bg;
+  margin: 0;
+  padding: 0;
+}
+
+.header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 24px;
+
+  h1 {
+    font-size: 1.4em;
+    margin: 0;
+    color: $title-col;
+    font-family: 'Playfair Display', serif;
+  }
+
+  .themeIcon {
+    width: 1em;
+    height: 1em;
+  }
+}

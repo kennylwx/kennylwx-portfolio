@@ -1,3 +1,4 @@
+/* eslint-disable consistent-return */
 const path = require('path');
 
 exports.createPages = ({ boundActionCreators, graphql }) => {

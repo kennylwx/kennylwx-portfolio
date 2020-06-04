@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { useStaticQuery, graphql } from 'gatsby';
 
 import Header from './header';
-import './layout.css';
+import '../styles/layout.scss';
 import Menu from './menu';
 
 const Layout = ({ children }) => {
