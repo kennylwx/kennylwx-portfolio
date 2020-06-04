@@ -2,7 +2,7 @@ import { Link } from 'gatsby';
 import PropTypes from 'prop-types';
 import React from 'react';
 
-import SunIcon from '../assets/sun.svg';
+import SunIcon from '../assets/icons/sun.svg';
 
 const Header = ({ siteTitle }) => (
   <header

@@ -1,22 +1,24 @@
 import React from 'react';
-import { Link } from 'gatsby';
-
+// import { Link } from 'gatsby';
 import Layout from '../components/layout';
-import Image from '../components/image';
 import SEO from '../components/seo';
+import Profile from '../components/profile';
+import Services from '../components/services';
+
 
 const IndexPage = () => (
   <Layout>
     <SEO title="Home" />
-    <h1>Welcome to my test project</h1>
-    <p>This is just a simple paragraphy.</p>
-    <p>Now go build something great.</p>
-    <div style={{ maxWidth: '300px', marginBottom: '1.45rem' }}>
-      <Image />
+    <div className="left-panel">
+      <Profile
+        name="Kenny Lee"
+        status="Web/Mobile developer"
+        contact="hello@kennylwx.com"
+      />
+      <Services name="Services" />
+
     </div>
-    <Link to="/page-2/">Go to page 2</Link>
-    <br />
-    <Link to="/using-typescript/">Go to &quot;Using TypeScript</Link>
+    <div className="right-panel" />
   </Layout>
 );
 
