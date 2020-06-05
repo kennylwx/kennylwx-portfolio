@@ -17,7 +17,7 @@ $full-width: $left-panel-width + $right-panel-width + $margin-between;
 
 @font-face {
   font-family: 'Playfair Display';
-  font-weight: 800;
+  font-weight: 500;
   src: url(../assets/fonts/PlayfairDisplay-VariableFont_wght.ttf) format('truetype');
 }
 
@@ -168,6 +168,8 @@ a {
 
   .author-profile {
     flex-direction: row !important;
+    // align-items: flex-start !important;
+    justify-content: flex-start !important;
 
     .author-info {
       text-align: left !important;
@@ -181,7 +183,6 @@ a {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-
   @extend .container;
   
   .author-img {
@@ -275,9 +276,11 @@ a {
       border-radius: 2px;
       
       .socials-type-img {
+        margin: auto 0;
       }
   
       .socials-type-name {
+        // margin-top: auto;
         @extend .sub-text-style;
       }
       
