@@ -67,7 +67,7 @@ html,body {
 
   h1 {
     font-size: 1.25em;
-    margin: 0;
+    margin-left: 6px;
     color: $title-col;
     font-family: 'Playfair Display', serif;
   }
@@ -75,6 +75,7 @@ html,body {
   .theme-icon {
     width: 1em;
     height: 1em;
+    margin-right: 6px;
   }
 }
 
@@ -119,7 +120,7 @@ main {
 
 .container {
   background-color: $profile-bg;
-  padding: 16px 24px;
+  padding: 24px 24px;
   border-radius: 6px;
 }
 

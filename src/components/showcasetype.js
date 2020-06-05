@@ -9,7 +9,10 @@ function ShowcaseType({
 }) {
   return (
     <div className="showcase-type">
-      <Link href="/" className="showcase-type-info">
+      <Link
+        href="/"
+        className="showcase-type-info"
+      >
         <div className="showcase-type-title">
           {title}
         </div>
@@ -20,12 +23,14 @@ function ShowcaseType({
       <div className="showcase-type-links">
         <Link
           href={link1}
+          target="_blank"
           className="showcase-type-links-1"
         >
           <GithubIcon />
         </Link>
         <Link
           href={link2}
+          target="_blank"
           className="showcase-type-links-2"
         >
           <DocumentIcon />

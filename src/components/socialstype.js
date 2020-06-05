@@ -6,6 +6,7 @@ function SocialsType({ name, img, link }) {
   return (
     <Link
       href={link || '/'}
+      target="_blank"
       className="socials-type"
     >
       <div className="socials-type-img">
