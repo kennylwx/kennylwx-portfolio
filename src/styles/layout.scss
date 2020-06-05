@@ -6,13 +6,14 @@ $sub-title-col: #F8FAFC;
 $services-txt-col:#D3D3D3;
 $item-title-col: #E2E2E2;
 $more-col: #838383;
-$highlight-col: #40B2B9;
+$highlight-col: #399CA1;
 $highlight-dark-col: #30898E;
 $btn-hightlight-col: rgba(61, 80, 99, 0.2);
 
 $left-panel-width: 310px;
 $right-panel-width: 380px;
 $margin-between: 20px;
+$full-width: $left-panel-width + $right-panel-width + $margin-between;
 
 @font-face {
   font-family: 'Playfair Display';
@@ -46,7 +47,6 @@ $margin-between: 20px;
   -webkit-box-orient: vertical;
 }
 
-
 html,body {
   background-color: $body-bg;
   margin: 0;
@@ -62,7 +62,8 @@ html,body {
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  padding: 12px 24px;
+  max-width: 90%;
+  margin: 16px auto;
 
   h1 {
     font-size: 1.25em;
@@ -77,24 +78,32 @@ html,body {
   }
 }
 
+@media only screen and (max-width: $full-width) {
+  main {
+    grid-template-columns: 1fr !important;
+    max-width: 90% !important;
+    min-width: $left-panel-width;
+  }
+}
+
 main {
   color: $title-col;
-  display: flex;
-  flex-direction: row;
-  width: $left-panel-width + $right-panel-width + $margin-between;
-  margin: 16px auto 0px;
-
+  max-width: $full-width;
+  margin: 16px auto;
+  display: grid;
+  grid-template-columns: $left-panel-width $right-panel-width;
+  grid-column-gap: $margin-between;
+  
   .left-panel {
-    width: $left-panel-width;
-    min-width: $left-panel-width;
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-rows: 115px 262px 93px auto;
+    grid-gap: $margin-between;
   }
 
   .right-panel {
-    width: $right-panel-width;
-    min-width: $right-panel-width;
-    margin-left: $margin-between;
+    display: grid;
+    grid-template-rows: auto auto;
+    grid-gap: $margin-between;
   }
 
 }
@@ -152,7 +161,6 @@ a {
   flex-direction: row;
   align-items: center;
   @extend .container;
-  margin-bottom: $margin-between;
   
   .author-img {
     border-radius: 50% !important;
@@ -187,7 +195,6 @@ a {
 .services {
   @extend .container-plus;
   text-transform: capitalize;
-  margin-bottom: $margin-between;
   
   .services-title {
     @extend .title-style-plus;
@@ -220,7 +227,8 @@ a {
 .socials {
   @extend .container-plus;
   display: grid;
-  grid-template-columns: 25% 25% 25% 25%;
+  grid-template-columns: repeat(4, 1fr);
+  grid-column-gap: auto;
 
   .socials-type {
     display: flex;
@@ -249,24 +257,20 @@ a {
 
 .showcase {
   @extend .container-plus;
-  margin-bottom: $margin-between;
   display: flex;
   flex-direction: column;
-
 
   .showcase-title {
     @extend .title-style-plus;
   }
 
   .showcase-container {
-    margin-top: 12px;
     margin-bottom: 8px;
 
     .showcase-type {
       display: flex;
       flex-direction: row;
       margin-bottom: 16px;
-      // background-color: orange;
 
       .showcase-type-info {
         display: flex;
@@ -280,6 +284,7 @@ a {
           text-transform: capitalize;
           margin-top: auto;
           margin-bottom: auto;
+          @include limit-text-line(1); 
         }
     
         .showcase-type-desc {
@@ -350,7 +355,6 @@ a {
 
 .updates {
   @extend .container-plus;
-  margin-bottom: $margin-between;
   display: flex;
   flex-direction: column;
 
@@ -360,7 +364,6 @@ a {
   }
 
   .updates-container {
-    margin-top: 12px;
     margin-bottom: 8px;
 
     .updates-type {
@@ -415,7 +418,11 @@ a {
 
 }
 
-
 footer {
+  text-align: center;
+  font-size: 0.82em;
+  color: $more-col;
+  font-weight: 500;
+  margin-bottom: 16px;
 
 }

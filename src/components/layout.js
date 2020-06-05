@@ -19,16 +19,16 @@ const Layout = ({ children }) => {
   return (
     <>
       <Header siteTitle={data.site.siteMetadata.title} />
-      <div>
+      <div className="main-outer">
         <main>
           {children}
         </main>
-        <footer>
-          ©
-          {new Date().getFullYear()}
-          {' KennyLWX'}
-        </footer>
       </div>
+      <footer>
+        ©
+        {new Date().getFullYear()}
+        {' KennyLWX'}
+      </footer>
     </>
   );
 };
