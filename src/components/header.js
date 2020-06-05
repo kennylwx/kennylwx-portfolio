@@ -20,7 +20,7 @@ const Header = ({ siteTitle }) => (
       </Link>
     </h1>
 
-    <SunIcon className="themeIcon" />
+    <SunIcon className="theme-icon" />
   </header>
 );
 

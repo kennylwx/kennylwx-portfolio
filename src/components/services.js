@@ -4,7 +4,7 @@ import ServicesType from './servicestype';
 import BrandingIcon from '../assets/icons/code.svg';
 
 
-function Services({ name }) {
+function Services({ title }) {
   const arr = [
     {
       name: 'Branding',
@@ -35,13 +35,14 @@ function Services({ name }) {
   return (
     <div className="services">
       <div className="services-title">
-        {name}
+        {title}
       </div>
       <div className="services-container">
         {
           arr.map((ser) => (
             <ServicesType
               name={ser.name}
+              img={ser.img}
             />
           ))
         }
@@ -51,7 +52,7 @@ function Services({ name }) {
 }
 
 Services.propTypes = {
-  name: propTypes.string.isRequired,
+  title: propTypes.string.isRequired,
 };
 
 export default Services;

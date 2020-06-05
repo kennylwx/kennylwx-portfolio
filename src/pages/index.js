@@ -4,7 +4,9 @@ import Layout from '../components/layout';
 import SEO from '../components/seo';
 import Profile from '../components/profile';
 import Services from '../components/services';
-
+import Socials from '../components/socials';
+import Showcase from '../components/showcase';
+import Updates from '../components/updates';
 
 const IndexPage = () => (
   <Layout>
@@ -15,10 +17,13 @@ const IndexPage = () => (
         status="Web/Mobile developer"
         contact="hello@kennylwx.com"
       />
-      <Services name="Services" />
-
+      <Services title="Specialty" />
+      <Socials />
     </div>
-    <div className="right-panel" />
+    <div className="right-panel">
+      <Showcase title="Highlights" />
+      <Updates title="Recent Updates" />
+    </div>
   </Layout>
 );
 

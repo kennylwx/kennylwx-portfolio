@@ -16,7 +16,7 @@ function ServicesType({ name, img }) {
 
 ServicesType.propTypes = {
   name: PropTypes.string.isRequired,
-  img: PropTypes.string.isRequired,
+  img: PropTypes.elementType.isRequired,
 };
 
 export default ServicesType;
