@@ -30,7 +30,11 @@ function Socials({ title }) {
 
   return (
     <div className="socials">
-      {
+      {/* <div className="socials-title">
+        {title}
+      </div> */}
+      <div className="socials-container">
+        {
         arr.map((soc) => (
           <SocialsType
             name={soc.name}
@@ -38,6 +42,7 @@ function Socials({ title }) {
           />
         ))
       }
+      </div>
     </div>
   );
 }

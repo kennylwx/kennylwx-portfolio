@@ -78,12 +78,21 @@ html,body {
   }
 }
 
+
 @media only screen and (max-width: $full-width) {
   main {
     grid-template-columns: 1fr !important;
     max-width: 90% !important;
     min-width: $left-panel-width;
   }
+
+  .filler {
+    display: none;
+  }
+}
+
+.filler {
+  height: auto;
 }
 
 main {
@@ -91,19 +100,19 @@ main {
   max-width: $full-width;
   margin: 16px auto;
   display: grid;
-  grid-template-columns: $left-panel-width $right-panel-width;
-  grid-column-gap: $margin-between;
+  grid-template-columns: 0.82fr 1fr;
+  grid-gap: 1em;
   
   .left-panel {
     display: grid;
-    grid-template-rows: 115px 262px 93px auto;
-    grid-gap: $margin-between;
+    grid-template-rows: 0.1fr 0.1fr 0.1fr;
+    grid-gap: 1em;
   }
 
   .right-panel {
     display: grid;
-    grid-template-rows: auto auto;
-    grid-gap: $margin-between;
+    grid-template-rows: repeat(auto-fit, auto);
+    grid-gap: 1em;
   }
 
 }
@@ -146,7 +155,6 @@ a {
   text-decoration: none; 
 }
 
-
 .more-button {
   color: $more-col;
   font-size: 0.89em;
@@ -156,10 +164,24 @@ a {
   text-transform: capitalize;
 }
 
+@media only screen and (max-width: $full-width) {
+
+  .author-profile {
+    flex-direction: row !important;
+
+    .author-info {
+      text-align: left !important;
+      margin: auto 26px !important;
+    }
+  }
+}
+
 .author-profile {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   align-items: center;
+  justify-content: center;
+
   @extend .container;
   
   .author-img {
@@ -170,7 +192,8 @@ a {
   }
 
   .author-info {
-    margin-left: 26px;
+    margin-top: 8px;
+    text-align: center;
 
     .author-name {
       @extend .title-style;
@@ -179,13 +202,17 @@ a {
     .author-status {
       font-size: 0.86em;
       color: $txt-col;
-      line-height: 1.2em;
     }
 
     .author-contact {
       font-size: 0.82em;
-      line-height: 1.4em;
       color: $txt-col;
+      text-decoration: underline;
+
+    }
+
+    .author-contact:hover {
+      color: $highlight-dark-col;
 
     }
 
@@ -202,10 +229,13 @@ a {
 
   .services-container {
     display: grid;
-    grid-template-columns: 33% 33% 33%;
-    grid-gap: 0.5%;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-gap: 1em;
 
     .services-type {
+      padding: 8px;
+      border-radius: 4px;
     
       .services-type-img {
         width: 36px;
@@ -215,7 +245,6 @@ a {
   
       .services-type-name {
         @extend .sub-text-style;
-  
       }
   
     }
@@ -226,34 +255,39 @@ a {
 
 .socials {
   @extend .container-plus;
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-column-gap: auto;
 
-  .socials-type {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    
-    .socials-type-img {
-      margin: auto;
-    }
-
-    .socials-type-name {
-      @extend .sub-text-style;
-    }
-    
+  .socials-title {
+    @extend .title-style-plus;
   }
 
-  .socials-type:hover {
-    color: $btn-hightlight-col !important;
+  .socials-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 1em;
+    margin: auto 0;
+
+    .socials-type {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 8px;
+      border-radius: 2px;
+      
+      .socials-type-img {
+      }
+  
+      .socials-type-name {
+        @extend .sub-text-style;
+      }
+      
+    }
+  
+    .socials-type:hover {
+      background-color: $btn-hightlight-col !important;
+    }
   }
-
-
 }
-
-
 
 .showcase {
   @extend .container-plus;
@@ -271,6 +305,7 @@ a {
       display: flex;
       flex-direction: row;
       margin-bottom: 16px;
+      justify-content: space-between;
 
       .showcase-type-info {
         display: flex;
@@ -288,11 +323,12 @@ a {
         }
     
         .showcase-type-desc {
-          margin-top: 2px;
           font-size: 0.82em;
           color: $txt-col;
           @include limit-text-line(2);
           margin-right: 6px;
+          margin-top: auto;
+          margin-bottom: auto;
         }
   
       }

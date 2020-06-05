@@ -19,6 +19,8 @@ const IndexPage = () => (
       />
       <Services title="Specialty" />
       <Socials />
+      <div className="filler" />
+
     </div>
     <div className="right-panel">
       <Showcase title="Highlights" />
