@@ -1,34 +1,38 @@
 import React from 'react';
 import propTypes from 'prop-types';
 import ServicesType from './servicestype';
-import BrandingIcon from '../assets/icons/code.svg';
-
 
 function Services({ title }) {
   const arr = [
     {
+      id: 0,
       name: 'Branding',
-      img: <BrandingIcon />,
+      img: 'code',
     },
     {
+      id: 1,
       name: 'UI/UX Design',
-      img: <BrandingIcon />,
+      img: 'design',
     },
     {
+      id: 2,
       name: 'Content Management',
-      img: <BrandingIcon />,
+      img: 'cms',
     },
     {
+      id: 3,
       name: 'Information Architecture',
-      img: <BrandingIcon />,
+      img: 'info',
     },
     {
+      id: 4,
       name: 'App Development',
-      img: <BrandingIcon />,
+      img: 'app',
     },
     {
+      id: 5,
       name: 'Web Development',
-      img: <BrandingIcon />,
+      img: 'web',
     },
   ];
 
@@ -41,6 +45,7 @@ function Services({ title }) {
         {
           arr.map((ser) => (
             <ServicesType
+              key={ser.id}
               name={ser.name}
               img={ser.img}
             />

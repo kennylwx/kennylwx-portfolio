@@ -6,16 +6,19 @@ import UpdatesType from './updatestype';
 function Updates({ title }) {
   const arr = [
     {
+      id: 0,
       title: 'There are many reasons why you should use React but there are also as many not to. ',
       desc: 'A simple task tracker with a burndown calendar chart in with',
       date: '1 week ago',
     },
     {
+      id: 1,
       title: 'There are many reasons why you should use React but there are also as many not to. ',
       desc: 'A simple task tracker with a burndown calendar chart in with',
       date: '1 week ago',
     },
     {
+      id: 2,
       title: 'There are many reasons why you should use React but there are also as many not to. ',
       desc: 'A simple task tracker with a burndown calendar chart in with',
       date: '1 week ago',
@@ -31,6 +34,7 @@ function Updates({ title }) {
         {
           arr.map((upd) => (
             <UpdatesType
+              key={upd.id}
               title={upd.title}
               desc={upd.desc}
               date={upd.date}
