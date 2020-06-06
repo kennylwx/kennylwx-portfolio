@@ -63,12 +63,12 @@ module.exports = {
         include_favicon: true,
       },
     },
-    {
-      resolve: "@rhysforyou/gatsby-plugin-safari-site-icon",
-      options: {
-        icon: "./src/images/LWX-icon.png",
-        color: "#0E1015",
-      },
-    },
+    // {
+    //   resolve: "@rhysforyou/gatsby-plugin-safari-site-icon",
+    //   options: {
+    //     icon: "./src/images/LWX-icon.png",
+    //     color: "#0E1015",
+    //   },
+    // },
   ],
 };

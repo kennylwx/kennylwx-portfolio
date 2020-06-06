@@ -1,12 +1,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Link } from 'gatsby';
 
 function SocialsType({ name, img, link }) {
   return (
-    <Link
+    <a
       href={link}
       target="_blank"
+      rel="noopener noreferrer"
       className="socials-type"
     >
       <div className="socials-type-img">
@@ -15,7 +15,7 @@ function SocialsType({ name, img, link }) {
       <div className="socials-type-name">
         {name}
       </div>
-    </Link>
+    </a>
   );
 }
 
