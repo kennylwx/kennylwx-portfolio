@@ -35,6 +35,7 @@ module.exports = {
         theme_color: `#0E1015`,
         display: `minimal-ui`,
         icon: `src/images/LWX-icon.png`, // This path is relative to the root of the site.
+        legacy: true,
       },
     },
     `gatsby-plugin-sass`,
