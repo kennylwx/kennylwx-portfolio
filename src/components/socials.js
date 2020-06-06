@@ -11,6 +11,7 @@ function Socials() {
       id: 0,
       name: 'Resume',
       img: <ResumeIcon />,
+      link: '/',
 
     },
     {

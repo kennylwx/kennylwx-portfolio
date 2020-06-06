@@ -5,7 +5,7 @@ import { Link } from 'gatsby';
 function SocialsType({ name, img, link }) {
   return (
     <Link
-      href={link || '/'}
+      href={link}
       target="_blank"
       className="socials-type"
     >
@@ -22,11 +22,7 @@ function SocialsType({ name, img, link }) {
 SocialsType.propTypes = {
   name: PropTypes.string.isRequired,
   img: PropTypes.element.isRequired,
-  link: PropTypes.string,
-};
-
-SocialsType.defaultProps = {
-  link: '',
+  link: PropTypes.string.isRequired,
 };
 
 export default SocialsType;
