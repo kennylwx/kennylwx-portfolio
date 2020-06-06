@@ -23,7 +23,7 @@ function Profile({ name, status, contact }) {
           className="author-contact"
           href={`mailto:${contact}?subject=Hello Kenny`}
         >
-          {contact}
+          Say Hello
         </a>
       </div>
     </div>

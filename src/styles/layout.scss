@@ -1,11 +1,7 @@
-
-
 $left-panel-width: 310px;
 $right-panel-width: 380px;
 $margin-between: 20px;
 $full-width: $left-panel-width + $right-panel-width + $margin-between;
-
-
 
 @font-face {
   font-family: 'Playfair Display';
@@ -88,7 +84,7 @@ a, a:visited {
   align-items: center;
   justify-content: space-between;
   max-width: 90%;
-  margin: 16px auto;
+  margin: 24px auto 0px;
 
   .title {
     font-size: 1.25em;
@@ -116,7 +112,7 @@ a, a:visited {
   main {
     grid-template-columns: 1fr !important;
     max-width: 90% !important;
-    min-width: $left-panel-width;
+    // min-width: $left-panel-width;
   }
 
   .filler {
@@ -203,7 +199,7 @@ main {
 
     .author-info {
       text-align: left !important;
-      margin: auto 26px !important;
+      margin: auto 0px auto 16px !important;
     }
   }
 }
@@ -218,8 +214,11 @@ main {
   .author-img {
     border-radius: 50% !important;
     overflow: hidden;
-    width: 82px;
-    height: 82px;
+    width: auto;
+    height: auto;
+    max-width: 82px;
+    max-height: 82px;
+    
   }
 
   .author-info {
@@ -228,17 +227,20 @@ main {
 
     .author-name {
       @extend .title-style;
+      @include limit-text-line(1);
     }
 
     .author-status {
       font-size: 0.86em;
       color: var(--text-normal);
+      @include limit-text-line(1);
     }
 
     .author-contact {
       font-size: 0.82em;
       color: var(--text-normal);
       text-decoration: underline;
+      @include limit-text-line(1);
 
     }
 
@@ -260,22 +262,29 @@ main {
 
   .services-container {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(2, 1fr);
-    grid-gap: 1em;
+    grid-gap: 2%;
 
     .services-type {
       padding: 8px;
       border-radius: 4px;
-    
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+
       .services-type-img {
-        width: 36px;
-        height: 36px;
-        margin: 12px auto 5px;
+        max-width: 36px;
+        max-height: 36px;
+        height: auto;
+        width: auto;
+        
       }
   
       .services-type-name {
         @extend .sub-text-style;
+        @include limit-text-line(2);
       }
   
     }
@@ -294,7 +303,6 @@ main {
   .socials-container {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    grid-gap: 1em;
     margin: auto 0;
 
     .socials-type {
@@ -310,7 +318,6 @@ main {
       }
   
       .socials-type-name {
-        // margin-top: auto;
         @extend .sub-text-style;
       }
       

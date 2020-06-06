@@ -16,23 +16,13 @@ function Services({ title }) {
     },
     {
       id: 2,
-      name: 'Content Management',
-      img: 'cms',
-    },
-    {
-      id: 3,
       name: 'Information Architecture',
       img: 'info',
     },
     {
-      id: 4,
-      name: 'App Development',
+      id: 3,
+      name: 'App/Web Development',
       img: 'app',
-    },
-    {
-      id: 5,
-      name: 'Web Development',
-      img: 'web',
     },
   ];
 

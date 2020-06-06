@@ -21,20 +21,22 @@ function ShowcaseType({
         </div>
       </Link>
       <div className="showcase-type-links">
-        <Link
+        <a
           href={link1}
           target="_blank"
+          rel="noopener noreferrer"
           className="showcase-type-links-1"
         >
           <GithubIcon />
-        </Link>
-        <Link
+        </a>
+        <a
           href={link2}
           target="_blank"
+          rel="noopener noreferrer"
           className="showcase-type-links-2"
         >
           <DocumentIcon />
-        </Link>
+        </a>
       </div>
     </div>
   );
