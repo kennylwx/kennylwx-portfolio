@@ -14,20 +14,21 @@ JavascriptTimeAgo.addLocale(en);
 const IndexPage = () => (
   <Layout>
     <SEO title="Home" />
-    <div className="left-panel">
-      <Profile
-        name="Kenny Lee"
-        status="Web/Mobile developer"
-        contact="hello@kennylwx.com"
-      />
-      <Services title="Specialty" />
-      <Socials />
-      <div className="filler" />
-
-    </div>
-    <div className="right-panel">
-      <Showcase title="Highlights" num={3} />
-      <Updates title="Recent Updates" num={3} />
+    <div className="main-panel">
+      <div className="left-panel">
+        <Profile
+          name="Kenny Lee"
+          status="Web/Mobile developer"
+          contact="hello@kennylwx.com"
+        />
+        <Services title="Specialty" />
+        <Socials />
+        <div className="filler" />
+      </div>
+      <div className="right-panel">
+        <Showcase title="Highlights" num={3} />
+        <Updates title="Recent Updates" num={3} />
+      </div>
     </div>
   </Layout>
 );

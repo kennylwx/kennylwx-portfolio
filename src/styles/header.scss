@@ -1,0 +1,36 @@
+.header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 90%;
+  margin: 24px auto 0px;
+
+  .title {
+    font-size: 1.25em;
+    margin-left: 6px;
+    color: var(--header-title) !important;
+    font-family: 'Playfair Display', serif;
+    text-decoration: none;
+  }
+
+  .theme-icon {
+    width: 1em;
+    height: 1em;
+    cursor: pointer;
+    padding: 8px;
+    border-radius: 50%;
+  }
+
+  .theme-icon:hover {
+    background-color: var(--highlight-action);
+  }
+}
+
+// $small-screen: 425px;
+
+// @media only screen and (max-width: $small-screen) {
+//   .header {
+//     width: 100% !important;
+//   }
+// }

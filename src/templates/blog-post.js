@@ -1,27 +1,29 @@
 import React from 'react';
-import { Link, graphql } from 'gatsby';
+import { graphql } from 'gatsby';
+import Layout from '../components/layout';
+import '../styles/blog.scss';
 
 function Template({ data }) {
   const post = data.markdownRemark;
 
   return (
-    <div>
-      <Link to="/blog">Go Back</Link>
-      <hr />
-      <h1>{post.frontmatter.title}</h1>
-      <h4>
-        Posted by
-        {' '}
-        {post.frontmatter.author}
-        {' '}
-        on
-        {' '}
-        {post.frontmatter.date}
-      </h4>
-      {/* eslint-disable-next-line react/no-danger */}
-      <div dangerouslySetInnerHTML={{ __html: post.html }} />
+    <Layout>
+      <div className="blog-container">
+        <div className="blog-post">
+          <h1 className="blog-title">{post.frontmatter.title}</h1>
+          <div className="blog-info">
+            <h4 className="blog-info-author">
+              {`by ${post.frontmatter.author} on ${post.frontmatter.date}`}
+            </h4>
+          </div>
+          <div className="blog-text">
+            {/* eslint-disable-next-line react/no-danger */}
+            <div dangerouslySetInnerHTML={{ __html: post.html }} />
+          </div>
+        </div>
+      </div>
+    </Layout>
 
-    </div>
   );
 }
 

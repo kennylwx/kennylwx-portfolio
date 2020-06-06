@@ -1,60 +1,57 @@
 import React from 'react';
-import { Link } from 'gatsby';
+import {
+  Link,
+  useStaticQuery,
+  graphql,
+} from 'gatsby';
 import PropTypes from 'prop-types';
 import UpdatesType from './updatestype';
 
 
 function Updates({ title, num }) {
-  const arr = [
-    {
-      id: 0,
-      title: 'There are many reasons why you should use React but there are also as many not to. ',
-      desc: 'A simple task tracker with a burndown calendar chart in with',
-      date: '2020-06-06',
-    },
-    {
-      id: 1,
-      title: 'There are many reasons why you should use React but there are also as many not to. ',
-      desc: 'A simple task tracker with a burndown calendar chart in with',
-      date: '2020-06-05',
-    },
-    {
-      id: 2,
-      title: 'There are many reasons why you should use React but there are also as many not to. ',
-      desc: 'A simple task tracker with a burndown calendar chart in with',
-      date: '2020-06-01',
-    },
-    {
-      id: 3,
-      title: 'There are many reasons why you should use React but there are also as many not to. ',
-      desc: 'A simple task tracker with a burndown calendar chart in with',
-      date: '2020-06-02',
-    },
-    {
-      id: 4,
-      title: 'There are many reasons why you should use React but there are also as many not to. ',
-      desc: 'A simple task tracker with a burndown calendar chart in with',
-      date: '2020-06-04',
-    },
-    {
-      id: 5,
-      title: 'There are many reasons why you should use React but there are also as many not to. ',
-      desc: 'A simple task tracker with a burndown calendar chart in with',
-      date: '2020-06-06',
-    },
-  ];
+  const pageQuery = useStaticQuery(
+    graphql`
+      query BlogIndexQuery {
+        allMarkdownRemark(
+          sort: {
+            fields: [frontmatter___date, frontmatter___title]
+            order: DESC
+          }
+        ) {
+          edges {
+            node {
+              id
+              frontmatter {
+                author
+                date
+                path
+                title
+              }
+              excerpt(format: PLAIN)
+            }
+          }
+        }
+      } 
+    `,
+  );
 
-  const findLatestPost = () => {
-    const result = [];
-    // sort by the latest post
-    arr.sort((a, b) => new Date(b.date) - new Date(a.date));
-
-    for (let i = 0; i < num; i += 1) {
-      result.push(arr[i]);
-    }
-    return result;
-  };
-
+  // pageQuery.allMarkdownRemark.edges.map((post) => (
+  //   <div key={post.node.id}>
+  //     <h3>{ post.node.frontmatter.author }</h3>
+  //     <small>
+  //       Posted by&nbsp;
+  //       { post.node.frontmatter.author }
+  //       &nbsp;on&nbsp;
+  //       { post.node.frontmatter.date }
+  //       <br />
+  //       <br />
+  //       <Link to={post.node.frontmatter.path}>Read More</Link>
+  //       <br />
+  //       <br />
+  //       <hr />
+  //     </small>
+  //   </div>
+  // ));
 
   return (
     <div className="updates">
@@ -63,12 +60,13 @@ function Updates({ title, num }) {
       </div>
       <div className="updates-container">
         {
-          findLatestPost().map((upd) => (
+          pageQuery.allMarkdownRemark.edges.slice(0, num).map((post) => (
             <UpdatesType
-              key={upd.id}
-              title={upd.title}
-              desc={upd.desc}
-              date={upd.date}
+              key={post.node.id}
+              title={post.node.frontmatter.title}
+              desc={post.node.excerpt}
+              date={post.node.frontmatter.date}
+              path={post.node.frontmatter.path}
             />
           ))
         }

@@ -4,6 +4,7 @@ import React from 'react';
 import { ThemeToggler } from 'gatsby-plugin-dark-mode';
 import SunIcon from '../assets/icons/sun.svg';
 import MoonIcon from '../assets/icons/moon.svg';
+import '../styles/header.scss';
 
 const Header = ({ siteTitle }) => (
   <header

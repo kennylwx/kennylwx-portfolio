@@ -82,41 +82,11 @@ a, a:visited {
   color: inherit;
 }
 
-.header {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-between;
-  max-width: 90%;
-  margin: 24px auto 0px;
-
-  .title {
-    font-size: 1.25em;
-    margin-left: 6px;
-    color: var(--header-title) !important;
-    font-family: 'Playfair Display', serif;
-    text-decoration: none;
-  }
-
-  .theme-icon {
-    width: 1em;
-    height: 1em;
-    cursor: pointer;
-    padding: 8px;
-    border-radius: 50%;
-  }
-
-  .theme-icon:hover {
-    background-color: var(--highlight-action);
-  }
-}
-
 
 @media only screen and (max-width: $full-width) {
-  main {
+  .main-panel {
     grid-template-columns: 1fr !important;
     max-width: 90% !important;
-    // min-width: $left-panel-width;
   }
 
   .filler {
@@ -128,7 +98,7 @@ a, a:visited {
   height: auto;
 }
 
-main {
+.main-panel {
   max-width: $full-width;
   margin: 16px auto;
   display: grid;

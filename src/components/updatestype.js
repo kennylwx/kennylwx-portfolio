@@ -5,10 +5,10 @@ import { Link } from 'gatsby';
 import ReactTimeAgo from 'react-time-ago';
 
 function UpdatesType({
-  title, desc, date,
+  title, desc, date, path,
 }) {
   return (
-    <Link href="/" className="updates-type">
+    <Link to={path} className="updates-type">
       <div className="updates-type-info">
         <div className="updates-type-date">
           <ReactTimeAgo date={new Date(date)} />
@@ -24,10 +24,12 @@ function UpdatesType({
   );
 }
 
+
 UpdatesType.propTypes = {
   title: PropTypes.string.isRequired,
   date: PropTypes.string.isRequired,
   desc: PropTypes.string.isRequired,
+  path: PropTypes.string.isRequired,
 };
 
 export default UpdatesType;
