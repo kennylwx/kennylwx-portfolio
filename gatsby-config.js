@@ -46,5 +46,28 @@ module.exports = {
         },
       },
     },
+    {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        name: `KennyLWX`,
+        short_name: `KennyLWX`,
+        start_url: `/`,
+        description: `Kenny&#39s portfolio.`,
+        lang: `en`,
+        background_color: `#0E1015`,
+        theme_color: `#0E1015`,
+        display: `standalone`,
+        icon: `src/images/LWX-icon.png`,
+        legacy: true,
+        include_favicon: true,
+      },
+    },
+    {
+      resolve: "@rhysforyou/gatsby-plugin-safari-site-icon",
+      options: {
+        icon: "./src/images/LWX-icon.png",
+        color: "#0E1015",
+      },
+    },
   ],
 };
