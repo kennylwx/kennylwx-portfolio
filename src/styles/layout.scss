@@ -59,6 +59,7 @@ body {
   --highlight-title: #399CA1;
   --highlight-normal: #30898E;
   --highlight-action: rgba(61, 80, 99, 0.2);
+  --container-border: #1A232C;
   -webkit-font-smoothing: antialiased;
 }
 
@@ -68,13 +69,13 @@ body.light {
   --header-title: #000000;
   --container-title: #191717;
   --text-title: rgb(12, 12, 12);
-  --text-normal: rgb(38, 38, 38);
+  --text-normal: rgb(57, 57, 57);
   --action-normal: #838383;
-  --highlight-title: rgb(34, 94, 97);
-  --highlight-normal: rgb(17, 48, 50);
-  --highlight-action: rgba(19, 25, 31, 0.2);
+  --highlight-title: rgb(23, 162, 172);
+  --highlight-normal: rgb(21, 148, 157);
+  --highlight-action: rgba(19, 25, 31, 0.1);
+  --container-border: #EBEBEB;
 }
-
 
 a, a:visited {
   text-decoration: none;
@@ -100,7 +101,6 @@ a, a:visited {
   .theme-icon {
     width: 1em;
     height: 1em;
-    margin-right: 6px;
     cursor: pointer;
     padding: 8px;
     border-radius: 50%;
@@ -153,6 +153,7 @@ main {
   background-color: var(--container-bg);
   padding: 24px 24px;
   border-radius: 6px;
+  border: 1px solid var(--container-border);
 }
 
 .container-plus {
