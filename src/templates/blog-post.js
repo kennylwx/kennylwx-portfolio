@@ -1,5 +1,6 @@
 import React from 'react';
 import { graphql } from 'gatsby';
+import ReactTimeAgo from 'react-time-ago';
 import Layout from '../components/layout';
 import '../styles/blog.scss';
 
@@ -13,7 +14,10 @@ function Template({ data }) {
           <h1 className="blog-title">{post.frontmatter.title}</h1>
           <div className="blog-info">
             <h4 className="blog-info-author">
-              {`by ${post.frontmatter.author} on ${post.frontmatter.date}`}
+              {`${post.frontmatter.author} `}
+              <span>&#8226;</span>
+              {' '}
+              <ReactTimeAgo date={new Date(post.frontmatter.date)} />
             </h4>
           </div>
           <div className="blog-text">
