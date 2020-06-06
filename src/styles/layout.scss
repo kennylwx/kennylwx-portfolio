@@ -1,19 +1,11 @@
-$body-bg: #0E1015;
-$title-col: #F8FAFC;
-$profile-bg: #1A232C;
-$txt-col: #D8D8D8;
-$sub-title-col: #F8FAFC;
-$services-txt-col:#D3D3D3;
-$item-title-col: #E2E2E2;
-$more-col: #838383;
-$highlight-col: #399CA1;
-$highlight-dark-col: #30898E;
-$btn-hightlight-col: rgba(61, 80, 99, 0.2);
+
 
 $left-panel-width: 310px;
 $right-panel-width: 380px;
 $margin-between: 20px;
 $full-width: $left-panel-width + $right-panel-width + $margin-between;
+
+
 
 @font-face {
   font-family: 'Playfair Display';
@@ -48,13 +40,45 @@ $full-width: $left-panel-width + $right-panel-width + $margin-between;
 }
 
 html,body {
-  background-color: $body-bg;
+  background-color: var(--bg);
   margin: 0;
   padding: 0;
   font-family: 'Open Sans', serif;
-  font-weight: 300;
-  color: $txt-col;
+  font-weight: 400;
 
+}
+
+body {
+  --bg: #0E1015;
+  --container-bg: #1A232C;
+  --header-title: #FFFFFF;
+  --container-title: #F8FAFC;
+  --text-title: rgb(233, 233, 233);
+  --text-normal: rgb(174, 174, 174);
+  --action-normal: #838383;
+  --highlight-title: #399CA1;
+  --highlight-normal: #30898E;
+  --highlight-action: rgba(61, 80, 99, 0.2);
+  -webkit-font-smoothing: antialiased;
+}
+
+body.light {
+  --bg: #EDF1F2;
+  --container-bg: #FFFFFF;
+  --header-title: #000000;
+  --container-title: #191717;
+  --text-title: rgb(12, 12, 12);
+  --text-normal: rgb(38, 38, 38);
+  --action-normal: #838383;
+  --highlight-title: rgb(34, 94, 97);
+  --highlight-normal: rgb(17, 48, 50);
+  --highlight-action: rgba(19, 25, 31, 0.2);
+}
+
+
+a, a:visited {
+  text-decoration: none;
+  color: inherit;
 }
 
 .header {
@@ -65,17 +89,25 @@ html,body {
   max-width: 90%;
   margin: 16px auto;
 
-  h1 {
+  .title {
     font-size: 1.25em;
     margin-left: 6px;
-    color: $title-col;
+    color: var(--header-title) !important;
     font-family: 'Playfair Display', serif;
+    text-decoration: none;
   }
 
   .theme-icon {
     width: 1em;
     height: 1em;
     margin-right: 6px;
+    cursor: pointer;
+    padding: 8px;
+    border-radius: 50%;
+  }
+
+  .theme-icon:hover {
+    background-color: var(--highlight-action);
   }
 }
 
@@ -97,7 +129,6 @@ html,body {
 }
 
 main {
-  color: $title-col;
   max-width: $full-width;
   margin: 16px auto;
   display: grid;
@@ -119,7 +150,7 @@ main {
 }
 
 .container {
-  background-color: $profile-bg;
+  background-color: var(--container-bg);
   padding: 24px 24px;
   border-radius: 6px;
 }
@@ -134,7 +165,7 @@ main {
 .title-style {
   font-weight: 500;
   font-size: 1.20em;
-  color: $sub-title-col;
+  color: var(--container-title);
   line-height: 1.67em;
   text-transform: capitalize;
 }
@@ -147,17 +178,14 @@ main {
 
 .sub-text-style {
   font-size: 0.74em;
-  color: $services-txt-col;
+  color: var(--text-normal);
   text-align: center;
   text-transform: capitalize;
 }
 
-a {
-  text-decoration: none; 
-}
 
 .more-button {
-  color: $more-col;
+  color: var(--action-normal);
   font-size: 0.89em;
   font-weight: 500;
   margin: 0px auto;
@@ -203,18 +231,18 @@ a {
 
     .author-status {
       font-size: 0.86em;
-      color: $txt-col;
+      color: var(--text-normal);
     }
 
     .author-contact {
       font-size: 0.82em;
-      color: $txt-col;
+      color: var(--text-normal);
       text-decoration: underline;
 
     }
 
     .author-contact:hover {
-      color: $highlight-dark-col;
+      color: var(--highlight-normal);
 
     }
 
@@ -288,7 +316,7 @@ a {
     }
   
     .socials-type:hover {
-      background-color: $btn-hightlight-col !important;
+      background-color: var(--highlight-action) !important;
     }
   }
 }
@@ -319,7 +347,7 @@ a {
         .showcase-type-title{
           font-size: 0.95em;
           font-weight: 400;
-          color: $item-title-col;
+          color: var(--text-title);
           text-transform: capitalize;
           margin-top: auto;
           margin-bottom: auto;
@@ -328,7 +356,7 @@ a {
     
         .showcase-type-desc {
           font-size: 0.82em;
-          color: $txt-col;
+          color: var(--text-normal);
           @include limit-text-line(2);
           margin-right: 6px;
           margin-top: auto;
@@ -338,11 +366,11 @@ a {
       }
 
       .showcase-type-info:hover .showcase-type-title {
-        color: $highlight-col !important;
+        color: var(--highlight-title) !important;
       }
   
       .showcase-type-info:hover .showcase-type-desc {
-        color: $highlight-dark-col !important;
+        color: var(--highlight-normal) !important;
       }
   
       .showcase-type-links {
@@ -361,7 +389,7 @@ a {
 
         }
         .showcase-type-links-1:hover {
-          background-color: $btn-hightlight-col;
+          background-color: var(--highlight-action);
         }
   
         .showcase-type-links-2 {
@@ -374,7 +402,7 @@ a {
         }
 
         .showcase-type-links-2:hover {
-          background-color: $btn-hightlight-col;
+          background-color: var(--highlight-action);
         }
   
   
@@ -415,7 +443,7 @@ a {
 
         .updates-type-date {
           font-weight: 300;
-          color: $txt-col;
+          color: var(--text-normal);
           font-size: 0.67em;
           margin-bottom: 4px;
         }
@@ -423,14 +451,14 @@ a {
         .updates-type-title{
           font-size: 0.90em;
           font-weight: 400;
-          color: $item-title-col;
+          color: var(--text-title);
           @include limit-text-line(2);
         }
     
         .updates-type-desc {
           margin-top: 2px;
           font-size: 0.82em;
-          color: $txt-col;
+          color: var(--text-normal);
           @include limit-text-line(1);
         }
   
@@ -439,15 +467,15 @@ a {
     }
 
     .updates-type:hover .updates-type-date {
-      color: $highlight-dark-col  !important;
+      color: var(--highlight-normal)  !important;
     }
 
     .updates-type:hover .updates-type-title {
-      color: $highlight-col !important;
+      color: var(--highlight-title) !important;
     }
 
     .updates-type:hover .updates-type-desc {
-      color: $highlight-dark-col !important;
+      color: var(--highlight-normal) !important;
     }
 
   }
@@ -461,7 +489,7 @@ a {
 footer {
   text-align: center;
   font-size: 0.82em;
-  color: $more-col;
+  color: var(--action-normal);
   font-weight: 500;
   margin-top: 36px;
   margin-bottom: 12px;

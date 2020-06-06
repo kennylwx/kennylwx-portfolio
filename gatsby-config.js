@@ -63,6 +63,7 @@ module.exports = {
         include_favicon: true,
       },
     },
+    'gatsby-plugin-dark-mode',
     // {
     //   resolve: "@rhysforyou/gatsby-plugin-safari-site-icon",
     //   options: {
