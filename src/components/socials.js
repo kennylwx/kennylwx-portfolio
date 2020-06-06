@@ -1,35 +1,27 @@
 import React from 'react';
 import SocialsType from './socialstype';
-import TwitterIcon from '../assets/icons/twitter.svg';
-import LinkedinIcon from '../assets/icons/linkedin.svg';
-import GithubIcon from '../assets/icons/github.svg';
-import ResumeIcon from '../assets/icons/pdf.svg';
 
 function Socials() {
   const arr = [
     {
       id: 0,
-      name: 'Resume',
-      img: <ResumeIcon />,
-      link: '/',
+      name: 'quora',
+      link: 'https://www.quora.com/profile/Kenny-Lee-74',
 
     },
     {
       id: 1,
-      name: 'LinkedIn',
-      img: <LinkedinIcon />,
+      name: 'linkedin',
       link: 'https://www.linkedin.com/in/kennylwx/',
     },
     {
       id: 2,
-      name: 'Twitter',
-      img: <TwitterIcon />,
+      name: 'twitter',
       link: 'https://twitter.com/kennylwx',
     },
     {
       id: 3,
-      name: 'Github',
-      img: <GithubIcon />,
+      name: 'github',
       link: 'https://github.com/kennylwx',
     },
   ];

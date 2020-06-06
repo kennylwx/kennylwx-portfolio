@@ -1,5 +1,6 @@
 import React from 'react';
-// import { Link } from 'gatsby';
+import JavascriptTimeAgo from 'javascript-time-ago';
+import en from 'javascript-time-ago/locale/en';
 import Layout from '../components/layout';
 import SEO from '../components/seo';
 import Profile from '../components/profile';
@@ -7,6 +8,8 @@ import Services from '../components/services';
 import Socials from '../components/socials';
 import Showcase from '../components/showcase';
 import Updates from '../components/updates';
+
+JavascriptTimeAgo.addLocale(en);
 
 const IndexPage = () => (
   <Layout>
@@ -23,8 +26,8 @@ const IndexPage = () => (
 
     </div>
     <div className="right-panel">
-      <Showcase title="Highlights" />
-      <Updates title="Recent Updates" />
+      <Showcase title="Highlights" num={3} />
+      <Updates title="Recent Updates" num={3} />
     </div>
   </Layout>
 );

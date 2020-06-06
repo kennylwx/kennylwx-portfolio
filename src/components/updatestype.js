@@ -2,6 +2,8 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Link } from 'gatsby';
 
+import ReactTimeAgo from 'react-time-ago';
+
 function UpdatesType({
   title, desc, date,
 }) {
@@ -9,7 +11,7 @@ function UpdatesType({
     <Link href="/" className="updates-type">
       <div className="updates-type-info">
         <div className="updates-type-date">
-          {date}
+          <ReactTimeAgo date={date} />
         </div>
         <div className="updates-type-title">
           {title}

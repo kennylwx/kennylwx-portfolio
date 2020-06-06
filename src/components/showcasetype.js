@@ -1,8 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Link } from 'gatsby';
-import GithubIcon from '../assets/icons/github-inactive.svg';
-import DocumentIcon from '../assets/icons/document.svg';
+import GithubIcon from '../assets/icons/github.svg';
+import LinkIcon from '../assets/icons/link.svg';
+
 
 function ShowcaseType({
   title, desc, link1, link2,
@@ -35,7 +36,7 @@ function ShowcaseType({
           rel="noopener noreferrer"
           className="showcase-type-links-2"
         >
-          <DocumentIcon />
+          <LinkIcon />
         </a>
       </div>
     </div>

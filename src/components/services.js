@@ -7,7 +7,7 @@ function Services({ title }) {
     {
       id: 0,
       name: 'Branding',
-      img: 'code',
+      img: 'brand',
     },
     {
       id: 1,
