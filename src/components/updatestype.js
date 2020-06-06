@@ -11,7 +11,7 @@ function UpdatesType({
     <Link href="/" className="updates-type">
       <div className="updates-type-info">
         <div className="updates-type-date">
-          <ReactTimeAgo date={date} />
+          <ReactTimeAgo date={new Date(date)} />
         </div>
         <div className="updates-type-title">
           {title}

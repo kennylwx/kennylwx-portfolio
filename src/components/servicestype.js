@@ -37,7 +37,7 @@ function ServicesType({ name, img }) {
 
 ServicesType.propTypes = {
   name: PropTypes.string.isRequired,
-  img: PropTypes.oneOf(['code', 'design', 'cms', 'info', 'app', 'web']).isRequired,
+  img: PropTypes.string.isRequired,
 };
 
 
