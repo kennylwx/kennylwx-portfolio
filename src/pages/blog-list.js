@@ -1,16 +1,16 @@
 import React from 'react';
 import {
-  Link,
   useStaticQuery,
   graphql,
 } from 'gatsby';
-import PropTypes from 'prop-types';
-import UpdatesType from './updatestype';
+import '../styles/blog-list.scss';
+import Layout from '../components/layout';
+import UpdatesType from '../components/updatestype';
 
-function Updates({ title, postNum }) {
+function BlogList() {
   const pageQuery = useStaticQuery(
     graphql`
-      query BlogIndexQuery {
+      query BlogIndexAllQuery {
         allMarkdownRemark(
           sort: {
             fields: [frontmatter___date, frontmatter___title]
@@ -36,15 +36,17 @@ function Updates({ title, postNum }) {
     `,
   );
 
-  return (
-    <div className="updates">
-      <div className="updates-title">
-        {title}
-      </div>
-      <div className="updates-container">
-        {
-          pageQuery.allMarkdownRemark.edges.slice(0, postNum).map((post) => (
+  const title = 'Blog Posts';
 
+  return (
+    <Layout>
+      <div className="blog-list">
+        <h1 className="blog-list-title">
+          {title}
+        </h1>
+        <div className="blog-list-container">
+          {
+          pageQuery.allMarkdownRemark.edges.map((post) => (
             <UpdatesType
               key={post.node.id}
               title={post.node.frontmatter.title}
@@ -56,17 +58,11 @@ function Updates({ title, postNum }) {
             />
           ))
         }
+        </div>
       </div>
-      <Link href="/blog-list" className="updates-more">
-        more
-      </Link>
-    </div>
+    </Layout>
+
   );
 }
 
-Updates.propTypes = {
-  title: PropTypes.string.isRequired,
-  postNum: PropTypes.number.isRequired,
-};
-
-export default Updates;
+export default BlogList;

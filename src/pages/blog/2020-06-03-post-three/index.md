@@ -1,11 +1,12 @@
 ---
-path: '/post-two'
-date: '2020-06-02'
+path: '/post-three'
+date: '2020-06-01'
 title: 'Should the United States Help Drive Global Development?'
 author: 'Kenny Lee'
+tags: ["highlight", "gatsby", "usa"]
 ---
 
-This is my very **second blog** post in Gatsby.
+This is my very **third blog** post in Gatsby.
 
 Flying into London from the States last week, Dr Rajiv Shah had a packed agenda discussing the GAVI programme (the Global Alliance for Vaccines and Immunization) he was working on: one of many ways Dr Shah, an administrator for the US Agency for International Development (USAID), is trying to make peoples’ lives better and longer no matter where they are from.
 
