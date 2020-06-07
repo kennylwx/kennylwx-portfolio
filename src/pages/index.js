@@ -18,7 +18,7 @@ const IndexPage = () => (
       <div className="left-panel">
         <Profile
           name="Kenny Lee"
-          status="Freelance developer"
+          status="Freelance Web Developer"
           contact="hello@kennylwx.com"
         />
         <Services title="Focus Area" />

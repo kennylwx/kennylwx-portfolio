@@ -7,7 +7,7 @@ import {
 import PropTypes from 'prop-types';
 import UpdatesType from './updatestype';
 
-function Updates({ title, num }) {
+function Updates({ title, postNum }) {
   const pageQuery = useStaticQuery(
     graphql`
       query BlogIndexQuery {
@@ -43,7 +43,7 @@ function Updates({ title, num }) {
       </div>
       <div className="updates-container">
         {
-          pageQuery.allMarkdownRemark.edges.slice(0, num).map((post) => (
+          pageQuery.allMarkdownRemark.edges.slice(0, postNum).map((post) => (
 
             <UpdatesType
               key={post.node.id}
@@ -66,7 +66,7 @@ function Updates({ title, num }) {
 
 Updates.propTypes = {
   title: PropTypes.string.isRequired,
-  num: PropTypes.number.isRequired,
+  postNum: PropTypes.number.isRequired,
 };
 
 export default Updates;

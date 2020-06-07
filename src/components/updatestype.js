@@ -84,8 +84,13 @@ UpdatesType.propTypes = {
   date: PropTypes.string.isRequired,
   desc: PropTypes.string.isRequired,
   path: PropTypes.string.isRequired,
-  repoLink: PropTypes.string.isRequired,
-  projectLink: PropTypes.string.isRequired,
+  repoLink: PropTypes.string,
+  projectLink: PropTypes.string,
+};
+
+UpdatesType.defaultProps = {
+  repoLink: '',
+  projectLink: '',
 };
 
 export default UpdatesType;

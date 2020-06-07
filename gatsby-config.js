@@ -5,6 +5,7 @@ module.exports = {
     description: 'Kenny&#39s fabulous portfolio.',
     author: `kennylwx`,
   },
+  pathPrefix: `/blog`,
   plugins: [
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-catch-links`,
@@ -64,12 +65,5 @@ module.exports = {
       },
     },
     'gatsby-plugin-dark-mode',
-    // {
-    //   resolve: "@rhysforyou/gatsby-plugin-safari-site-icon",
-    //   options: {
-    //     icon: "./src/images/LWX-icon.png",
-    //     color: "#0E1015",
-    //   },
-    // },
   ],
 };
