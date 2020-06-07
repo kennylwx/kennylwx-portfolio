@@ -1,0 +1,31 @@
+$small-screen: 480px;
+
+@media only screen and (max-width: $small-screen) {
+  .blog-list {
+    width: 75% !important;
+    border-radius: none;
+  }
+}
+
+.blog-list {
+  background-color: var(--container-bg);
+  margin: 16px auto;
+  padding: 24px 24px;
+  width: 60%;
+  border-radius: 5px;
+  
+
+  .blog-list-title {
+    font-weight: 500;
+    font-size: 1.20em;
+    color: var(--container-title);
+    line-height: 1.67em;
+    text-transform: capitalize;
+  }
+
+  .blog-list-container {
+    margin-top: 16px;
+
+  }
+
+}

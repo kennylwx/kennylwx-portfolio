@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { graphql } from 'gatsby';
 import ReactTimeAgo from 'react-time-ago';
 import Layout from '../components/layout';
-import '../styles/blog.scss';
+import '../styles/blog-post.scss';
 import GithubIcon from '../assets/icons/github.svg';
 import LinkIcon from '../assets/icons/link.svg';
 
@@ -68,7 +68,6 @@ function Template({ data }) {
         </div>
       </div>
     </Layout>
-
   );
 }
 

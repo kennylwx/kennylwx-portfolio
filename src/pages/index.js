@@ -27,7 +27,7 @@ const IndexPage = () => (
       </div>
       <div className="right-panel">
         <Highlight title="Highlights" postNum={2} />
-        <Updates title="Recent Updates" postNum={3} />
+        <Updates title="Recent Posts" postNum={3} />
       </div>
     </div>
   </Layout>

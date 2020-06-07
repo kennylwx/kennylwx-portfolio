@@ -1,12 +1,10 @@
 import React from 'react';
 import {
-  Link,
   useStaticQuery,
   graphql,
 } from 'gatsby';
 import PropTypes from 'prop-types';
 import UpdatesType from './updatestype';
-
 
 function Highlight({ title, postNum }) {
   const pageQuery = useStaticQuery(
