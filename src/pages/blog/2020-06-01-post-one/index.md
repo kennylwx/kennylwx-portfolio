@@ -1,7 +1,7 @@
 ---
 path: '/post-one'
 date: '2020-06-08'
-title: 'Should the United States Help Drive Global Development?'
+title: 'Portfolio Website with GatsbyJS'
 author: 'Kenny Lee'
 repoLink: '/'
 projectLink: '/'
