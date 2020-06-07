@@ -31,14 +31,52 @@ $small-screen: 480px;
     color: var(--text-title);
     font-size: 0.92em;
     display: flex;
-    flex-direction: column;
-    margin-top: 12px;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 8px;
     margin-bottom: 24px;
 
     .blog-info-author {
       font-weight: 300;
       margin: 0;
       font-size: 1.1em;
+    }
+
+    .blog-info-links {
+      display: flex;
+      flex-direction: row;
+
+      .blog-info-links-item svg path {
+        fill: var(--icon-normal);
+      }
+
+      .blog-info-links-item svg {
+        width: 24px;
+        height: 24px;
+      }
+
+      .blog-info-links-item {
+        margin-left: 4px;
+        border-radius: 50%;
+        padding: 6px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .blog-info-links-item:hover {
+        background-color: var(--highlight-action);
+      }
+
+      .blog-info-links-1 {
+        @extend .blog-info-links-item;
+      }
+
+      .blog-info-links-2 {
+        @extend .blog-info-links-item;
+
+      }
     }
 
   }

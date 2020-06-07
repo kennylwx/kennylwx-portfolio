@@ -69,8 +69,8 @@ body.light {
   --text-title: rgb(12, 12, 12);
   --text-normal: rgb(57, 57, 57);
   --action-normal: #838383;
-  --highlight-title: rgb(23, 162, 172);
-  --highlight-normal: rgb(21, 148, 157);
+  --highlight-title: #AE31FF;
+  --highlight-normal: #A60EFF;
   --highlight-action: rgba(19, 25, 31, 0.1);
   --container-border: #EBEBEB;
   --icon-normal: #4E4D4D;
@@ -211,14 +211,8 @@ a, a:visited {
 
     .author-contact {
       font-size: 0.82em;
-      color: var(--text-normal);
-      text-decoration: underline;
-      @include limit-text-line(1);
-
-    }
-
-    .author-contact:hover {
       color: var(--highlight-normal);
+      @include limit-text-line(1);
 
     }
 

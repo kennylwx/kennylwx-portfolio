@@ -35,24 +35,6 @@ function Updates({ title, num }) {
     `,
   );
 
-  // pageQuery.allMarkdownRemark.edges.map((post) => (
-  //   <div key={post.node.id}>
-  //     <h3>{ post.node.frontmatter.author }</h3>
-  //     <small>
-  //       Posted by&nbsp;
-  //       { post.node.frontmatter.author }
-  //       &nbsp;on&nbsp;
-  //       { post.node.frontmatter.date }
-  //       <br />
-  //       <br />
-  //       <Link to={post.node.frontmatter.path}>Read More</Link>
-  //       <br />
-  //       <br />
-  //       <hr />
-  //     </small>
-  //   </div>
-  // ));
-
   return (
     <div className="updates">
       <div className="updates-title">
