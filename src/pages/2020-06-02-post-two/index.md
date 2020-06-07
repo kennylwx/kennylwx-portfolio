@@ -1,8 +1,11 @@
 ---
 path: '/post-two'
 date: '2020-06-02'
-title: 'Should the United States Help Drive Global Development?'
+title: 'Should the United States'
 author: 'Kenny Lee'
+repoLink: '/'
+projectLink: '/'
+tags: ["highlight", "gatsby", "usa"]
 ---
 
 This is my very **second blog** post in Gatsby.

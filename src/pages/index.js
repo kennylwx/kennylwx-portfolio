@@ -6,7 +6,7 @@ import SEO from '../components/seo';
 import Profile from '../components/profile';
 import Services from '../components/services';
 import Socials from '../components/socials';
-import Showcase from '../components/showcase';
+import Highlight from '../components/highlight';
 import Updates from '../components/updates';
 
 JavascriptTimeAgo.addLocale(en);
@@ -18,16 +18,16 @@ const IndexPage = () => (
       <div className="left-panel">
         <Profile
           name="Kenny Lee"
-          status="Web/Mobile developer"
+          status="Freelance developer"
           contact="hello@kennylwx.com"
         />
-        <Services title="Specialty" />
+        <Services title="Focus Area" />
         <Socials />
         <div className="filler" />
       </div>
       <div className="right-panel">
-        <Showcase title="Highlights" num={3} />
-        <Updates title="Recent Updates" num={3} />
+        <Highlight title="Highlights" postNum={2} />
+        <Updates title="Recent Updates" postNum={3} />
       </div>
     </div>
   </Layout>

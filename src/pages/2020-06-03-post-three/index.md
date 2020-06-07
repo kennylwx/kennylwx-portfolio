@@ -3,6 +3,7 @@ path: '/post-three'
 date: '2020-06-01'
 title: 'Should the United States Help Drive Global Development?'
 author: 'Kenny Lee'
+tags: ["highlight", "gatsby", "usa"]
 ---
 
 This is my very **third blog** post in Gatsby.

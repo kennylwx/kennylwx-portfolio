@@ -7,14 +7,20 @@ import {
 import PropTypes from 'prop-types';
 import UpdatesType from './updatestype';
 
-function Updates({ title, num }) {
+
+function Highlight({ title, postNum }) {
   const pageQuery = useStaticQuery(
     graphql`
-      query BlogIndexQuery {
+      query BlogIndexHighlightQuery {
         allMarkdownRemark(
           sort: {
             fields: [frontmatter___date, frontmatter___title]
             order: DESC
+          },
+          filter: { 
+            frontmatter: { 
+              tags: { eq: "highlight" } 
+            } 
           }
         ) {
           edges {
@@ -25,6 +31,7 @@ function Updates({ title, num }) {
                 date
                 path
                 title
+                tags
                 projectLink
                 repoLink
               }
@@ -32,18 +39,19 @@ function Updates({ title, num }) {
             }
           }
         }
-      } 
+      }
     `,
   );
 
+
   return (
-    <div className="updates">
-      <div className="updates-title">
+    <div className="highlight">
+      <div className="highlight-title">
         {title}
       </div>
-      <div className="updates-container">
+      <div className="highlight-container">
         {
-          pageQuery.allMarkdownRemark.edges.slice(0, num).map((post) => (
+          pageQuery.allMarkdownRemark.edges.slice(0, postNum).map((post) => (
 
             <UpdatesType
               key={post.node.id}
@@ -57,16 +65,13 @@ function Updates({ title, num }) {
           ))
         }
       </div>
-      <Link href="/blog" className="updates-more">
-        more
-      </Link>
     </div>
   );
 }
 
-Updates.propTypes = {
+Highlight.propTypes = {
   title: PropTypes.string.isRequired,
-  num: PropTypes.number.isRequired,
+  postNum: PropTypes.number.isRequired,
 };
 
-export default Updates;
+export default Highlight;
