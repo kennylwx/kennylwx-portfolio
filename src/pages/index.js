@@ -19,7 +19,7 @@ const IndexPage = () => (
         <Profile
           name="Kenny Lee"
           status="Freelance Web Developer"
-          contact="hello@kennylwx.com"
+          contact="kenny_seven@icloud.com"
         />
         <Services title="Focus Area" />
         <Socials />
