@@ -36,7 +36,7 @@ The hardest part of the design work were the colours. I wanted my portfolio to h
 
 ## Building with GatsbyJS
 
-Prior to this, I had no experience using GatsbyJS. My initial intention was to build the website with React. I hadn't even heard of GatsbyJS until the day before when I was scrolling through Ben Awad's video on [when should you use Gatsby?](https://www.youtube.com/watch?v=VoscwJ6MGsU). Thinkering with the idea, I decided to give GatsbyJS a shot, with the crash course prepared by [TraversyMedia](https://www.youtube.com/watch?v=6YhqQ2ZW1sc). After an hour long following Brad, I found GatsbyJS simple and easy. It met all of my requirements. However, I was apprehensive about using graphql, but nevertheless I powered through. I figured it'll eventually work out by it self.
+Prior to this, I had no experience using GatsbyJS. My initial intention was to build the website with React. I hadn't even heard of GatsbyJS until the day before when I was scrolling through Ben Awad's video on [when should you use Gatsby?](https://www.youtube.com/watch?v=VoscwJ6MGsU). Thinkering with the idea, I decided to give GatsbyJS a shot, with the crash course prepared by [TraversyMedia](https://www.youtube.com/watch?v=6YhqQ2ZW1sc). After an hour long following Brad, I found GatsbyJS simple and easy. It met all of my requirements. However, I was apprehensive about using graphql, but nevertheless I powered through. I figured it'll eventually work out by itself.
 
 Most of my time was spent on building React components, and dressing it up with raw HTML and CSS. And when the time came that I had to query some data using graphql, I found it pleasantly effortless. The tool GraphiQL that came with GatsbyJS really made visualising the dataset and the query effortless.
 
@@ -65,6 +65,8 @@ My experience with React in altering the icons were much smoother than GatsbyJS.
 
 Before starting the project, I had already purchased a domain name from Google Domains. It was cheap and easy. I deployed the project that I had worked on from the crash course to Netlify. All I had to do was point my google domain name servers to my project's on Netlify. It took 2 days before I could actually see the actual web page hosted on my domain name. Although quite confusing with its directives, my experience with Netlify and a Google Domains was a welcomed one.
 
-## Conclusion
+## Aftermath
 
-All in all, it took less than a week of my time from start to finish to complete this [portfolio site](https://kennylwx.com/). There were definitely ups and downs, but overall, the experience was a somewhat pleasant one. **6.5/10** would recommend only if you have to.
+All in all, it took less than a week of my time from start to finish to complete this [project](https://kennylwx.com/). There were definitely changes that needed to be made. For instance, the profile section didn't feature much of a story of the author. And the service section felt lacking in telling it. Another drawback on the design was that it's almost entirely textual base. A section that features images would be desirable, but would also terribly unabalance the overall aesthetics.
+
+There were definitely ups and downs in building this projects, but overall, the experience was a somewhat pleasant one. **6.5/10** would recommend only if you have to.
